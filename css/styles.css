@@ -385,7 +385,7 @@ color: white;
         justify-content: space-between;
         align-items: center;
         gap: 1px;
-        font-size: 10px;
+        font-size: 13px;
     }
 
     .mobile-logo-bar {
@@ -422,7 +422,7 @@ color: white;
         display: none;
         width: 102%;
         background: goldenrod;
-        margin-top: 9rem !important;
+        margin-top: 7rem !important;
     }
 
     .menu-wrapper.active {
