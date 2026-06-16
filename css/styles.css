@@ -2048,4 +2048,13 @@ textarea:focus{
         width: 32px;
         height: 32px;
     }
+
+    .logo1 img{
+    width:130px;
+    height:auto;
+    margin-left: 26rem;
+    padding-top: 0;
+    padding-bottom: 0;
+ 
+}
 }
