@@ -932,8 +932,8 @@ textarea:focus{
     }
 
     .consult-modal h1 {
-        font-size: 1.4rem;
-        padding-right: 40px; /* prevents text overlapping close button */
+        font-size: 1rem;
+        padding-right: 40px;
     }
 
     .close-btn {
