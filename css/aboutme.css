@@ -356,6 +356,7 @@ color: white;
 /* MOBILE ONLY */
 @media (max-width: 768px) {
 
+    /* hide desktop navbar-top if needed */
     .navbar-top {
         display: none;
     }
@@ -380,7 +381,7 @@ color: white;
         justify-content: space-between;
         align-items: center;
         gap: 1px;
-        font-size: 19px;
+        font-size: 11px;
     }
 
     .mobile-logo-bar {
@@ -400,7 +401,7 @@ color: white;
 
     .mobile-menu-toggle {
         display: block;
-        width: 110%;
+        width: 100%;
         background: goldenrod;
         color: black;
         padding: 14px;
@@ -417,7 +418,7 @@ color: white;
         display: none;
         width: 102%;
         background: goldenrod;
-        margin-top: 7.29rem !important;
+        margin-top: 7rem !important;
     }
 
     .menu-wrapper.active {
@@ -434,6 +435,7 @@ color: white;
         padding: 14px;
         border-bottom: 1px solid rgba(0,0,0,0.2);
     }
+
 
 }
 
