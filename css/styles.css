@@ -2022,3 +2022,31 @@ textarea:focus{
     padding-bottom: 0;
  
 }
+
+@media (max-width: 768px) {
+
+    .consult-modal {
+        width: 95%;
+        padding: 20px;
+        border-width: 4px;
+    }
+
+    .consult-modal h1 {
+        font-size: 1.5rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 13px;
+    }
+
+    .send-btn {
+        height: 45px;
+        font-size: 14px;
+    }
+
+    .close-btn {
+        width: 28px;
+        height: 28px;
+    }
+}
