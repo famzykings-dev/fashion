@@ -474,8 +474,17 @@ body {
     color: goldenrod !important;
 } */
 
-.love{
+/* .love{
     color: goldenrod !important;
+} */
+
+body {
+    background: black;
+}
+
+.love {
+    color: red !important;
+    font-size: 50px;
 }
 
 .updated {
