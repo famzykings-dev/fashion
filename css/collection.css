@@ -905,6 +905,7 @@ body {
     text-align:center;
     font-size:48px;
     margin-bottom:10px;
+    color:goldenrod;
 }
 
 /* SUBTEXT */
@@ -1010,9 +1011,10 @@ textarea:focus{
         margin-top: 40px;
     }
 
-    .consult-modal h1 {
+      .consult-modal h1 {
         font-size: 1rem;
         padding-right: 40px;
+         color:goldenrod;
     }
 
     .close-btn {
