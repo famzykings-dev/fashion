@@ -463,9 +463,9 @@ body {
 }
 
 h1, h2 {
-    color: black;
-    font-size: 2rem;
-    font-weight: 900;
+    color: goldenrod;
+    font-size: 1rem;
+    font-weight: 600;
 }
 
 h1 {
