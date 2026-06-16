@@ -2026,9 +2026,11 @@ textarea:focus{
 @media (max-width: 768px) {
 
     .consult-modal {
-        width: 95%;
+        width: 90%;
         padding: 20px;
         border-width: 4px;
+        height: 70px;
+        
     }
 
     .consult-modal h1 {
