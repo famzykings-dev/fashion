@@ -2029,7 +2029,8 @@ textarea:focus{
         width: 90%;
         padding: 20px;
         border-width: 4px;
-        height: 70px;
+         padding-top: 5rem;
+    
         
     }
 
