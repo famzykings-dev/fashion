@@ -2049,12 +2049,15 @@ textarea:focus{
         height: 32px;
     }
 
-    .logo1 img{
-    width:130px;
-    height:auto;
-    margin-left: 26rem;
-    padding-top: 0;
-    padding-bottom: 0;
- 
-}
+    .logo1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .logo1 img {
+        width: 70px;
+        margin: 0 auto !important;
+    }
 }
