@@ -2025,31 +2025,27 @@ textarea:focus{
 
 @media (max-width: 768px) {
 
+    .consult-overlay {
+        padding: 15px;
+        align-items: flex-start;
+    }
+
     .consult-modal {
-        width: 90%;
+        width: 95%;
+        max-height: 90vh;
         padding: 20px;
-        border-width: 4px;
-         padding-top: 5rem;
-    
-        
+        margin-top: 40px;
     }
 
     .consult-modal h1 {
-        font-size: 1.5rem;
-    }
-
-    .form-group input,
-    .form-group textarea {
-        font-size: 13px;
-    }
-
-    .send-btn {
-        height: 45px;
-        font-size: 14px;
+        font-size: 1.4rem;
+        padding-right: 40px; /* prevents text overlapping close button */
     }
 
     .close-btn {
-        width: 28px;
-        height: 28px;
+        top: 10px;
+        right: 10px;
+        width: 32px;
+        height: 32px;
     }
 }
