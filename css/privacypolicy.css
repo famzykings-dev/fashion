@@ -918,3 +918,42 @@ textarea:focus{
     padding-bottom: 0;
  
 }
+
+@media (max-width: 768px) {
+
+    .consult-overlay {
+        padding: 15px;
+        align-items: flex-start;
+    }
+
+    .consult-modal {
+        width: 95%;
+        max-height: 90vh;
+        padding: 20px;
+        margin-top: 40px;
+    }
+
+    .consult-modal h1 {
+        font-size: 1.4rem;
+        padding-right: 40px; /* prevents text overlapping close button */
+    }
+
+    .close-btn {
+        top: 10px;
+        right: 10px;
+        width: 32px;
+        height: 32px;
+    }
+
+    .logo1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .logo1 img {
+        width: 110px;
+        margin: 0 auto !important;
+    }
+}
