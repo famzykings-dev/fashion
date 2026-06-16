@@ -1083,6 +1083,7 @@ textarea:focus{
     .consult-modal h1 {
         font-size: 1rem;
         padding-right: 40px;
+         color:goldenrod;
     }
 
     .close-btn {
