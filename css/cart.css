@@ -610,7 +610,7 @@ color: white;
 }
 
 
-@media screen and (max-width: 768px) {
+@media (max-width: 430px) {
 
     .product-img {
       display: block;
