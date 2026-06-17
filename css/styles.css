@@ -1714,7 +1714,7 @@ body {
 }
 
 .footer-links a {
-  color: #9ca3af;
+   color: #fff;
   text-decoration: none;
   font-size: 0.875rem;
   transition: color 0.3s ease;
@@ -1753,18 +1753,18 @@ body {
 .subscribe-form button {
   width: 100%;
   padding: 0.75rem 1rem;
-  background: #dc2626;
-  color: #fff;
+  background: goldenrod;
+  color: black;
   border: none;
   border-radius: 6px;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
   transition: background 0.3s ease;
 }
 
 .subscribe-form button:hover {
-  background: #b91c1c;
+  background: goldenrod;
 }
 
 .footer-bottom {
@@ -1774,9 +1774,10 @@ body {
 }
 
 .footer-bottom p {
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: #6b7280;
 }
+
 
 /* WhatsApp Floating Button - Replaces Jivo */
 .whatsapp-float {
