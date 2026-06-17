@@ -67,6 +67,13 @@
                     <img src="img/instagram.jpg" alt="">
                 </a>
 
+            <a href="cart.html" class="cart-icon-wrapper">
+                <span class="caret-icon">
+                    <i class="bi bi-cart fs-3"></i>
+                    <span class="cart-count cartCount">0</span>
+                </span>
+            </a>
+
             </div>
 
         </div>
@@ -97,6 +104,12 @@
                 <a href="#"><img src="img/twitter.jpg" width="18"></a>
                 <a href="#"><img src="img/instagram.jpg" width="18"></a>
                 <a href="#"><img src="img/linkdin.jpg" width="18"></a>
+               <a href="cart.html" class="cart-icon-wrapper">
+                <span class="caret-icon">
+                    <i class="bi bi-cart fs-3"></i>
+                    <span class="cart-count cartCount">0</span>
+                </span>
+            </a>
             </div>
 
         </div>
@@ -421,7 +434,141 @@ toggle.addEventListener("click", function () {
 });
 </script>
 
+<script>
+function updateCartCount() {
 
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    let totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
+
+    let counters = document.querySelectorAll(".cartCount");
+
+    counters.forEach(countEl => {
+
+        if (totalItems > 0) {
+            countEl.style.display = "flex";
+            countEl.innerText = totalItems;
+        } else {
+            countEl.style.display = "none";
+        }
+
+    });
+
+}
+
+
+
+function addToCart(btn) {
+
+    let product = {
+        name: btn.dataset.name,
+        price: parseInt(btn.dataset.price),
+        image: btn.dataset.image,
+        description: btn.dataset.description,
+        qty: 1
+    };
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    let existing = cart.find(item => item.name === product.name);
+
+    if (existing) {
+        existing.qty += 1;
+    } else {
+        cart.push(product);
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    updateCartCount();
+
+    alert("Added to cart ✔");
+}
+
+
+
+function loadCart() {
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let container = document.getElementById("cartItems");
+
+    container.innerHTML = "";
+
+    let subtotal = 0;
+
+    cart.forEach((item, index) => {
+
+        let total = item.price * item.qty;
+        subtotal += total;
+
+        container.innerHTML += `
+        <tr>
+            <td>
+                <div class="product-info">
+                    <img src="${item.image}" class="product-img">
+
+                    <div>
+                        <strong>${item.name}</strong><br>
+                        <small>${item.description}</small><br>
+                        <a href="#" onclick="removeItem(${index})" class="remove-btn">Remove</a>
+                    </div>
+                </div>
+            </td>
+
+            <td>₦${item.price.toLocaleString()}</td>
+
+            <td>
+                <input type="number" min="1" value="${item.qty}"
+                    onchange="updateQty(${index}, this.value)">
+            </td>
+
+            <td>₦${total.toLocaleString()}</td>
+        </tr>
+        `;
+    });
+
+    document.getElementById("subtotal").innerText = subtotal.toLocaleString();
+}
+
+
+
+function removeItem(index) {
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    cart.splice(index, 1);
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    loadCart();          
+    updateCartCount();  
+}
+
+
+
+function updateQty(index, qty) {
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    cart[index].qty = parseInt(qty);
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    loadCart();
+    updateCartCount();
+}
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    updateCartCount();
+
+  
+    if (document.getElementById("cartItems")) {
+        loadCart();
+    }
+});
+
+</script>
 
 </body>
 </html>
