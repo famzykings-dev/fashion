@@ -664,6 +664,17 @@ body{
     border-radius:20px;
     
 }
+
+    .cta a{
+    display:inline-block;
+    text-decoration:none;
+    color:white;
+    padding:10px 20px;
+    background:goldenrod;
+    border-radius:50px;
+    font-weight:500;
+    font-size: 1rem;
+}
 }
 
 
