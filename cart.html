@@ -371,7 +371,8 @@ function sendToWhatsApp() {
         message += `Qty: ${item.qty}\n`;
         message += `Total: ₦${itemTotal.toLocaleString()}\n`;
         message += `Description: ${item.description}\n`;
-        message += `Image: ${item.image}\n\n`;
+
+        message += `🖼️ View Image: ${item.image}\n\n`;
     });
 
     message += `💰 GRAND TOTAL: ₦${total.toLocaleString()}\n\n`;
@@ -384,8 +385,8 @@ function sendToWhatsApp() {
 
     let phone = "2348109529656";
 
+    let url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 
-    let url = message += `🖼️ View Image: https://fashion-eight-topaz.vercel.app/img/IMG1.jpg%0A`;
     window.open(url, "_blank");
 }
 </script>
