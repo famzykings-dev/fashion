@@ -5,7 +5,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>privacy Policy</title>
+  <title>Cart</title>
+  <link rel="icon" type="image/png" href="img/logo new.png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/themify-icons/0.1.2/css/themify-icons.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -18,134 +19,50 @@
 <body>
 
     <!-- NAVBAR -->
-<nav class="custom-navbar">
+     <nav id="navigation" class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="img/logo new.png" alt="Logo" class="logo-img">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+         <ul class="navbar-nav ms-auto">
+
+          <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+              <a class="nav-link" href="index.html">HOME</a>
+          </li>
+
+          <li class="nav-item">
+              <a class="nav-link" href="about-me.html">ABOUT US</a>
+          </li>
+
+          <li class="nav-item">
+              <a class="nav-link openModalBtn" href="#">CONTACT</a>
+          </li>
+
+          <li class="nav-item">
+              <a class="nav-link" href="collections.html">COLLECTION</a>
+          </li>
 
 
-    <!-- TOP SECTION -->
-    <div class="navbar-top">
-
-        <!-- LEFT LOGO -->
-        <div class="logo-box">
-            <a href="index.html">
-            <img src="img/logo new.png" alt="Logo">
-              </a>
-          </div>
-
-        <!-- RIGHT CONTENT -->
-        <div class="right-content">
-
-            <!-- BUTTONS -->
-            <div class="button-group">
-                <button class="nav-btn btn-one">Join Our Email List</button>
-                 <!-- THIS BUTTON WILL OPEN MODAL -->
-                 <button class="nav-btn btn-two openModalBtn">
-                    Schedule a Consultation
-                </button>
-            </div>
-
-            <!-- SMALL WRITEUP -->
-            <div class="small-text">
-                <p>BenardFarms Fashion <b class="Number">(234)8109529656</b></p>
-            </div>
-
-            <!-- SOCIAL ICONS -->
-            <div class="social-icons">
-
-                <a href="#">
-                    <img src="img/facebook.jpg" alt="">
-                </a>
-
-                <a href="#">
-                    <img src="img/twitter.jpg" alt="">
-                </a>
-
-                <a href="#">
-                    <img src="img/linkdin.jpg" alt="">
-                </a>
-
-                <a href="#">
-                    <img src="img/instagram.jpg" alt="">
-                </a>
-
-            <a href="cart.html" class="cart-icon-wrapper">
+          <a href="cart.html" class="cart-icon-wrapper">
                 <span class="caret-icon">
                     <i class="bi bi-cart fs-3"></i>
                     <span class="cart-count cartCount">0</span>
                 </span>
             </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-<!-- SECOND NAVBAR -->
-<div class="menu-navbar">
- 
-
-<!-- MOBILE HEADER (ONLY SHOWS ON MOBILE) -->
-<div class="mobile-header">
-
-    <!-- TOP BAR -->
-    <div class="mobile-topbar">
-        <div class="mobile-topbar-inner">
-
-            <div class="doc-name">
-                BenardFarms Fashion
-            </div>
-
-            <a href="tel:08109529656" class="phone">
-                (234)8109529656
-            </a>
-
-               <div class="socials">
-                <a href="#"><img src="img/facebook.jpg" width="18"></a>
-                <a href="#"><img src="img/twitter.jpg" width="18"></a>
-                <a href="#"><img src="img/instagram.jpg" width="18"></a>
-                <a href="#"><img src="img/linkdin.jpg" width="18"></a>
-             <a href="cart.html" class="cart-icon-wrapper">
-                <span class="caret-icon">
-                    <i class="bi bi-cart fs-3"></i>
-                    <span class="cart-count cartCount">0</span>
-                </span>
-            </a>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- LOGO BAR -->
-    <div class="mobile-logo-bar">
-    <a href="index.html">
-        <img src="img/logo new.png" alt="Logo">
-    </a>
-    </div>
-
-    <!-- TOGGLE BUTTON -->
+      </ul>
+            
+       
+        </ul>
    
-    <button class="mobile-menu-toggle" id="menuToggle">
-    ☰ MENU ☰
-</button>
-
-</div>
-
-<!-- YOUR NAV MENU (WRAP IT) -->
-
-  <div class="menu-wrapper" id="menuWrapper">
-
-    <ul class="nav-level-1">
-
-        <li><a href="index.html">HOME</a></li>
-        <li><a href="about-me.html">ABOUT US</a></li>
-        <li><a href="#" class="openModalBtn">CONTACT</a></li>
-        <li><a href="collections.html">COLLECTIONS</a></li>
-
-    </ul>
-
-</div>
-
-</div>
+      </div>
+    </div>
+  </nav>
 
 
 
@@ -160,10 +77,14 @@
     </div>
 
     <table class="table cart-table mt-4">
-     <th style="width:45%">PRODUCT</th>
-    <th style="width:15%">PRICE</th>
-    <th style="width:15%">QTY</th>
-    <th style="width:25%">TOTAL</th>
+       <thead>
+    <tr>
+        <th style="width:45%">PRODUCT</th>
+        <th style="width:20%">PRICE</th>
+        <th style="width:13%">QTY</th>
+        <th style="width:30%">TOTAL</th>
+    </tr>
+</thead>
 
       <tbody id="cartItems"></tbody>
     </table>
@@ -632,6 +553,26 @@ window.addEventListener("DOMContentLoaded", () => {
     });
 });
 </script>
+
+<script>
+document.addEventListener("click", function (event) {
+
+    const navbar = document.querySelector(".navbar-collapse");
+    const toggler = document.querySelector(".navbar-toggler");
+
+    if (
+        navbar.classList.contains("show") &&
+        !navbar.contains(event.target) &&
+        !toggler.contains(event.target)
+    ) {
+        bootstrap.Collapse.getInstance(navbar).hide();
+    }
+
+});
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
