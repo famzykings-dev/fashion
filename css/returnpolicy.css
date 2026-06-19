@@ -66,12 +66,11 @@
     }
 
    
-     .navbar-nav {
+       .navbar-nav {
         padding-left:0 !important;
-        width: 90%;
+        width: 95%;
         height: auto;
-     
-    
+        gap:0;
 }
   
 
