@@ -109,7 +109,7 @@
 /* Product image */
 .product-img {
     width: 70px;
-    height: 80px;
+    height: 90px;
     object-fit: cover;
     border-radius: 8px;
 }
