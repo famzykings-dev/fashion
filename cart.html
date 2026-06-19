@@ -384,9 +384,8 @@ function sendToWhatsApp() {
 
     let phone = "2348109529656";
 
-    // IMPORTANT FIX: encode message properly
-    let url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 
+    let url = message += `🖼️ View Image: https://fashion-eight-topaz.vercel.app/img/IMG1.jpg%0A`;
     window.open(url, "_blank");
 }
 </script>
