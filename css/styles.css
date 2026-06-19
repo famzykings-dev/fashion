@@ -340,7 +340,7 @@ background: goldenrod !important;
     }
 
     .image-text{
-        left: 0;
+        left: 20px !important;
         right: 30px !important;
         bottom: 2px;
         max-width: calc(100% - 40px);
