@@ -349,13 +349,14 @@ loadCart();
 function sendToWhatsApp() {
 
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let note = document.querySelector(".note-box")?.value || "";
 
     if (cart.length === 0) {
         alert("Cart is empty!");
         return;
     }
 
-    let message = "🛒 *NEW ORDER FROM WEBSITE*%0A%0A";
+    let message = "🛒 NEW ORDER FROM WEBSITE\n\n";
 
     let total = 0;
 
@@ -364,21 +365,27 @@ function sendToWhatsApp() {
         let itemTotal = item.price * item.qty;
         total += itemTotal;
 
-    message += `📦 *Product ${index + 1}*%0A`;
-    message += `Name: ${item.name}%0A`;
-    message += `Price: ₦${item.price}%0A`;
-    message += `Qty: ${item.qty}%0A`;
-    message += `Total: ₦${itemTotal}%0A`;
-    message += `Description: ${item.description}%0A`;
-    message += `📷 Product Image:%0A${item.image}%0A%0A`;
+        message += `📦 PRODUCT ${index + 1}\n`;
+        message += `Name: ${item.name}\n`;
+        message += `Price: ₦${item.price.toLocaleString()}\n`;
+        message += `Qty: ${item.qty}\n`;
+        message += `Total: ₦${itemTotal.toLocaleString()}\n`;
+        message += `Description: ${item.description}\n`;
+        message += `Image: ${item.image}\n\n`;
     });
 
-    message += `💰 *GRAND TOTAL: ₦${total}*%0A%0A`;
+    message += `💰 GRAND TOTAL: ₦${total.toLocaleString()}\n\n`;
+
+    if (note) {
+        message += `📝 NOTE: ${note}\n\n`;
+    }
+
     message += `🙏 Please confirm order`;
 
     let phone = "2348109529656";
 
-    let url = `https://wa.me/${phone}?text=${message}`;
+    // IMPORTANT FIX: encode message properly
+    let url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 
     window.open(url, "_blank");
 }
