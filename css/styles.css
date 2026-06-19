@@ -104,7 +104,7 @@
     object-fit: cover;
     transform: translate(-50%, -50%);
     z-index: 1;
-    padding-top: 11rem;
+    padding-top: 7rem;
 }
 
 /* Dark Overlay For Better Text Visibility */
