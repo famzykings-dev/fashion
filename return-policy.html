@@ -175,26 +175,33 @@
             <a href="tel:234-8109529656">(234) 8109529656</a>
         </p>
 
-        <!-- FORM -->
-    <form>
+            <!-- FORM -->
+<form action="https://formsubmit.co/kingsfam1997@gmail.com" method="POST">
+
+    <!-- Disable Captcha -->
+    <input type="hidden" name="_captcha" value="false">
+
+    <!-- Redirect after submit -->
+    <input type="hidden" name="_next" value="https://fashion-eight-topaz.vercel.app/thank-you.html">
+
     <!-- NAME -->
     <div class="form-group">
-        <input type="text" placeholder="Your name">
+        <input type="text" name="name" placeholder="Your name" required>
     </div>
 
     <!-- EMAIL -->
     <div class="form-group">
-        <input type="email" placeholder="Email address">
+        <input type="email" name="email" placeholder="Email address" required>
     </div>
 
     <!-- PHONE -->
     <div class="form-group">
-        <input type="tel" placeholder="Phone number">
+        <input type="tel" name="phone" placeholder="Phone number" required>
     </div>
 
     <!-- MESSAGE -->
     <div class="form-group">
-        <textarea placeholder="Message"></textarea>
+        <textarea name="message" placeholder="Message" required></textarea>
     </div>
 
     <!-- BUTTON -->
