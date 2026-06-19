@@ -414,7 +414,7 @@ function addToCart(btn) {
     let product = {
         name: btn.dataset.name,
         price: parseInt(btn.dataset.price),
-        image: btn.dataset.image,
+        image: "https://fashion-eight-topaz.vercel.app/" + btn.dataset.image,
         description: btn.dataset.description,
         qty: 1
     };
