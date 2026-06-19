@@ -104,7 +104,7 @@
     object-fit: cover;
     transform: translate(-50%, -50%);
     z-index: 1;
-    padding-top: 7rem;
+    padding-top: 6rem;
 }
 
 /* Dark Overlay For Better Text Visibility */
@@ -244,6 +244,7 @@ background:#fff;
     object-fit: cover;
     transform: translate(-50%, -50%);
     z-index: 1;
+    padding-top: 8rem;
 }
 
 .hero{
