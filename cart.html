@@ -371,7 +371,6 @@ function sendToWhatsApp() {
         message += `Qty: ${item.qty}\n`;
         message += `Total: ₦${itemTotal.toLocaleString()}\n`;
         message += `Description: ${item.description}\n`;
-
         message += `🖼️ View Image: ${item.image}\n\n`;
     });
 
@@ -387,7 +386,21 @@ function sendToWhatsApp() {
 
     let url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 
+   
     window.open(url, "_blank");
+
+ 
+    setTimeout(() => {
+
+        localStorage.removeItem("cart");  
+        updateCartCount();                
+
+       
+        if (typeof loadCart === "function") {
+            loadCart();
+        }
+
+    }, 1000);
 }
 </script>
 
