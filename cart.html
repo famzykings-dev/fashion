@@ -386,21 +386,15 @@ function sendToWhatsApp() {
 
     let url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 
-   
+    localStorage.removeItem("cart");
+
+    updateCartCount();
+
+    if (typeof loadCart === "function") {
+        loadCart();
+    }
+
     window.open(url, "_blank");
-
- 
-    setTimeout(() => {
-
-        localStorage.removeItem("cart");  
-        updateCartCount();                
-
-       
-        if (typeof loadCart === "function") {
-            loadCart();
-        }
-
-    }, 1000);
 }
 </script>
 
